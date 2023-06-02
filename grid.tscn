@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://qesmj86p4im8"]
+
+[ext_resource type="Script" path="res://Grid.gd" id="1_enbsd"]
+[ext_resource type="Texture2D" uid="uid://dlejhacle0f2v" path="res://Slot.svg" id="2_526kj"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_enbsd")
+
+[node name="GridBackground" type="Node2D" parent="."]
+
+[node name="Slot00" type="Sprite2D" parent="GridBackground"]
+position = Vector2(64, 64)
+texture = ExtResource("2_526kj")
+
+[node name="Slot01" type="Sprite2D" parent="GridBackground"]
+position = Vector2(192, 64)
+texture = ExtResource("2_526kj")
+
+[node name="Slot02" type="Sprite2D" parent="GridBackground"]
+position = Vector2(320, 64)
+texture = ExtResource("2_526kj")
+
+[node name="Slot03" type="Sprite2D" parent="GridBackground"]
+position = Vector2(448, 64)
+texture = ExtResource("2_526kj")
+
+[node name="Slot10" type="Sprite2D" parent="GridBackground"]
+position = Vector2(64, 192)
+texture = ExtResource("2_526kj")
+
+[node name="Slot11" type="Sprite2D" parent="GridBackground"]
+position = Vector2(192, 192)
+texture = ExtResource("2_526kj")
+
+[node name="Slot12" type="Sprite2D" parent="GridBackground"]
+position = Vector2(320, 192)
+texture = ExtResource("2_526kj")
+
+[node name="Slot13" type="Sprite2D" parent="GridBackground"]
+position = Vector2(448, 192)
+texture = ExtResource("2_526kj")
+
+[node name="Slot20" type="Sprite2D" parent="GridBackground"]
+position = Vector2(64, 320)
+texture = ExtResource("2_526kj")
+
+[node name="Slot21" type="Sprite2D" parent="GridBackground"]
+position = Vector2(192, 320)
+texture = ExtResource("2_526kj")
+
+[node name="Slot22" type="Sprite2D" parent="GridBackground"]
+position = Vector2(320, 320)
+texture = ExtResource("2_526kj")
+
+[node name="Slot23" type="Sprite2D" parent="GridBackground"]
+position = Vector2(448, 320)
+texture = ExtResource("2_526kj")
+
+[node name="Slot30" type="Sprite2D" parent="GridBackground"]
+position = Vector2(64, 448)
+texture = ExtResource("2_526kj")
+
+[node name="Slot31" type="Sprite2D" parent="GridBackground"]
+position = Vector2(192, 448)
+texture = ExtResource("2_526kj")
+
+[node name="Slot32" type="Sprite2D" parent="GridBackground"]
+position = Vector2(320, 448)
+texture = ExtResource("2_526kj")
+
+[node name="Slot33" type="Sprite2D" parent="GridBackground"]
+position = Vector2(448, 448)
+texture = ExtResource("2_526kj")
+
+[node name="ActiveCells" type="Node2D" parent="."]

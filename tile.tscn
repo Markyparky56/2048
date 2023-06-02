@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://0rx22dvdwf1s"]
+
+[ext_resource type="Script" path="res://Tile.gd" id="1_6d0hv"]
+[ext_resource type="Texture2D" uid="uid://c3y1hyf61bpgx" path="res://Tile.svg" id="2_mn4gy"]
+[ext_resource type="FontVariation" uid="uid://dpbo1ycpk5fvh" path="res://font.tres" id="3_1etcr"]
+
+[node name="Tile" type="Node2D"]
+position = Vector2(64, 64)
+script = ExtResource("1_6d0hv")
+
+[node name="TileBG" type="Sprite2D" parent="."]
+texture = ExtResource("2_mn4gy")
+
+[node name="Value" type="Label" parent="TileBG"]
+offset_left = -55.0
+offset_top = -56.0
+offset_right = 55.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("3_1etcr")
+text = "UNSET"
