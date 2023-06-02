@@ -7,22 +7,41 @@ enum GameState
 	Busy
 }
 
+enum Direction
+{
+	Up,
+	Down,
+	Left, 
+	Right
+}
+
 var State : GameState = GameState.Idle
 var GridNode : Grid = null
 @onready var RNG = RandomNumberGenerator.new()
 var HighCellChance : float = 0.8
 
 func _ready():
-	get_tree().get_root().ready.connect(RootReady)
+	get_tree().get_root().ready.connect(OnRootReady)
 	
-func RootReady():
-	print("Root Ready")
+func OnRootReady():
 	var root = get_tree().get_root()
 	GridNode = root.get_node("Grid")
-
+	GridNode.GridUpdated.connect(OnGridUpdated)
+	
 	# Begin start up sequence
 	StartUp()
+
+func OnGridUpdated():
+	# Allow input again
+	State = GameState.Idle
 	
+	# Spawn new tile
+	AddNewCellInValidSpot()
+	
+	# Check if grid is full	
+		# Check if there are any valid moves
+			# if false, end game
+
 func StartUp():
 	RNG.randomize() # Seed the RNG for this game	
 	
@@ -50,15 +69,25 @@ func _input(event):
 	if State == GameState.Busy:
 		pass
 	
+	# Handle directional inputs	
 	if event.is_action_pressed("ui_left"):
-		pass
+		HandleInput(Direction.Left)
 	elif event.is_action_pressed("ui_right"):
-		pass
+		HandleInput(Direction.Right)
 	elif event.is_action_pressed("ui_up"):
-		pass
+		HandleInput(Direction.Up)
 	elif event.is_action_pressed("ui_down"):
-		pass
+		HandleInput(Direction.Down)
 	
+func HandleInput(direction: Direction):
+	# Set as busy to block further input
+	State = GameState.Busy
+	
+	# Tell grid to move in direction
+	
+	
+	pass
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
