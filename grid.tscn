@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Grid.gd" id="1_enbsd"]
 [ext_resource type="Texture2D" uid="uid://dlejhacle0f2v" path="res://Slot.svg" id="2_526kj"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Grid" type="Node2D"]
 script = ExtResource("1_enbsd")
 
 [node name="GridBackground" type="Node2D" parent="."]

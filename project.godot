@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="2048"
+run/main_scene="res://grid.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Controller="*res://Controller.gd"
 
 [display]
 
